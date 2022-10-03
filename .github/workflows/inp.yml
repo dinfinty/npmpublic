@@ -28,8 +28,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: gliech/create-github-secret-action@v1
-      with:
-        name: "$github.event.inputs.SYMBOL_NAME"
-        value: Eternia
-        pa_token: ${{ secrets.PA_TOKEN }}
+    - name: Config for PAIR
+        run: |
+          # create config files from github secrets
+          echo "$github.event.inputs.SYMBOL_NAME"
