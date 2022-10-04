@@ -27,6 +27,6 @@ jobs:
     - uses: gliech/create-github-secret-action@v1
       with:
         # name: ${{format('TESTNET_PAIR_NAME={0}-PERP',github.event.inputs.SYMBOL_NAME) }}
-        name: ${{github.event.inputs.SYMBOL_NAME }}
+        name: DDD
         value: Eternia
         pa_token: ${{ secrets.PA_TOKEN }}
