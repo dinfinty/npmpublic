@@ -25,6 +25,6 @@ jobs:
     steps:
     - uses: gliech/create-github-secret-action@v1
       with:
-        name: ${{format('TESTNET-{0}-PERP',github.event.inputs.SYMBOL_NAME) }}
-        value: Eternia
+        name: ${{format('TESTNET_{0}_PERP_IP',github.event.inputs.SYMBOL_NAME) }}
+        value: ${{github.event.inputs.MARKET_IP}}
         pa_token: ${{ secrets.PA_TOKEN }}
