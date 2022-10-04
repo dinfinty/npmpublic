@@ -29,10 +29,11 @@ jobs:
     - name: Saving Secret
       uses: gliech/create-github-secret-action@v1
       with:
-        name: ${{format('TESTNET_{0}_PERP_IP',github.event.inputs.SYMBOL_NAME) }}
-        value: ${{env.KEY}}
-        pa_token: ${{ env.VALUE }}
+        name: ${{env.KEY }}
+        value: ${{env.VALUE}}
+        pa_token: ${{secrets.PA_TOKEN  }}
 
     - name: dsfsdfsd
       run: |
+        echo "$env.KEY"
         echo "$env.VALUE"
