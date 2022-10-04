@@ -17,6 +17,9 @@ on:
             required: true
             type: string
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+env:
+  KEY: ${{format('TESTNET_{0}_PERP_IP',github.event.inputs.SYMBOL_NAME) }}
+  VALUE: ${{github.event.inputs.MARKET_IP}}
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -27,9 +30,9 @@ jobs:
       uses: gliech/create-github-secret-action@v1
       with:
         name: ${{format('TESTNET_{0}_PERP_IP',github.event.inputs.SYMBOL_NAME) }}
-        value: ${{github.event.inputs.MARKET_IP}}
-        pa_token: ${{ secrets.PA_TOKEN }}
+        value: ${{env.KEY}}
+        pa_token: ${{ env.VALUE }}
 
     - name: dsfsdfsd
       run: |
-        echo "$secrets[format('TESTNET_{0}_PERP_IP',github.event.inputs.SYMBOL_NAME)]"
+        echo "$env.VALUE"
