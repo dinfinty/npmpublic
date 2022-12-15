@@ -4,7 +4,7 @@ on:
   workflow_dispatch: null
   pull_request:
     branches:
-      - master
+      - main
     types:
       - closed
 jobs:
