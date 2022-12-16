@@ -25,3 +25,4 @@ jobs:
         uses: pypa/gh-action-pypi-publish@master
         with:
           password: ${{ secrets.DANYAL_PYPI_KEY }}
+          skip_existing: true
