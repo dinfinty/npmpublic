@@ -24,10 +24,4 @@ jobs:
       - name: Publish distribution 📦 to PyPI 📦
         uses: pypa/gh-action-pypi-publish@master
         with:
-          password: ${{ secrets.DANYAL_PYPI_TEST_KEY }}
-          repository_url: https://test.pypi.org/legacy/
-          skip_existing: true
-      - name: Publish distribution 📦 to PyPI 📦
-        uses: pypa/gh-action-pypi-publish@master
-        with:
           password: ${{ secrets.DANYAL_PYPI_KEY }}
