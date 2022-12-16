@@ -22,7 +22,12 @@ jobs:
       - name: Build a binary wheel and a source tarball
         run: python -m build --sdist --wheel --outdir dist/ .
       - name: Publish distribution 📦 to PyPI 📦
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          password: ${{ secrets.DANYAL_PYPI_TEST_KEY }}
+          repository_url: https://test.pypi.org/legacy/
+          skip_existing: true
+      - name: Publish distribution 📦 to PyPI 📦
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          user: __token__
           password: ${{ secrets.DANYAL_PYPI_KEY }}
