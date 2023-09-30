@@ -9,7 +9,7 @@
     "main": "build/index.js",
     "scripts": {
        "filter-trade-spec": "rdme openapi:reduce src/swagger.json --tag \"Public\" --tag \"Private\" --out src/trade-api.yaml --title \"Trade API\"",
-        "filter-rewards-spec": "rdme openapi:reduce src/swagger.json --tag \"Overview\" --tag \"Affiliate\" --tag \"Trade & Earn\" --tag \"Market Maker Program\" --out src/swagger/rewards-api.yaml --title \"Rewards API\""
+        "filter-rewards-spec": "rdme openapi:reduce src/swagger.json --tag \"Overview\" --tag \"Affiliate\" --tag \"Trade & Earn\" --tag \"Market Maker Program\" --out src/rewards-api.yaml --title \"Rewards API\""
       
     },
     "dependencies": {
