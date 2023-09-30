@@ -19,25 +19,25 @@ jobs:
             - run: yarn
             - name: Validate & filter open-api for Trade API 🕵️‍♂️
               run:
-                  rdme openapi:reduce src/swagger/swagger.json --tag "Public" --tag
-                  "Private" --out src/swagger/trade-api.yaml --title "Trade API"
+                  rdme openapi:reduce src/swagger.json --tag "Public" --tag
+                  "Private" --out src/trade-api.yaml --title "Trade API"
             - name: Validate & filter open-api for Rewards API 🕵️‍♂️
               run:
-                  rdme openapi:reduce src/swagger/swagger.json --tag "Overview" --tag
+                  rdme openapi:reduce src/swagger.json --tag "Overview" --tag
                   "Affiliate" --tag "Trade & Earn" --tag "Market Maker Program" --out
-                  src/swagger/rewards-api.yaml --title "Rewards API"
+                  src/rewards-api.yaml --title "Rewards API"
             - name: Run `openapi` command 🚀
               uses: readmeio/rdme@v8
               with:
                   rdme:
-                      openapi src/swagger/rewards-api.yaml
+                      openapi src/rewards-api.yaml
                       --key=rdme_xn8s9h104414055e8f8e8788dd658a1c6d85857311724c19eb37926fd3646657201898
                       --id=6516c7a8ffe3cf17e8668a72 rewards-api.yaml --title "Rewards API"
             - name: Run `openapi` command 🚀
               uses: readmeio/rdme@v8
               with:
                   rdme:
-                      openapi src/swagger/trade-api.yaml
+                      openapi src/trade-api.yaml
                       --key=rdme_xn8s9h104414055e8f8e8788dd658a1c6d85857311724c19eb37926fd3646657201898
                       --id=6517175f75a9ae00762b53b3 trade-api.yaml --title "Trade API"
             # - name: Run `openapi` command 🚀
