@@ -8,8 +8,8 @@
     },
     "main": "build/index.js",
     "scripts": {
-       "filter-trade-spec": "rdme openapi:reduce src/swagger/swagger.json --tag \"Public\" --tag \"Private\" --out src/swagger/trade-api.yaml --title \"Trade API\"",
-        "filter-rewards-spec": "rdme openapi:reduce src/swagger/swagger.json --tag \"Overview\" --tag \"Affiliate\" --tag \"Trade & Earn\" --tag \"Market Maker Program\" --out src/swagger/rewards-api.yaml --title \"Rewards API\""
+       "filter-trade-spec": "rdme openapi:reduce src/swagger.json --tag \"Public\" --tag \"Private\" --out src/trade-api.yaml --title \"Trade API\"",
+        "filter-rewards-spec": "rdme openapi:reduce src/swagger.json --tag \"Overview\" --tag \"Affiliate\" --tag \"Trade & Earn\" --tag \"Market Maker Program\" --out src/swagger/rewards-api.yaml --title \"Rewards API\""
       
     },
     "dependencies": {
