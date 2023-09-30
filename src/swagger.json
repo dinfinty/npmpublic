@@ -4015,7 +4015,7 @@
 				"operationId": "GetCandlestickData",
 				"responses": {
 					"200": {
-						"description": "Tuple [openTime: number, openPrice: string, highPrice: string, lowPrice: string, closePrice: string, volume: string, closeTime: number, quoteAssetVolume: string, noOfTrades: number, takerBuyAssetVolume: string, takerBuyQuoteVolume: string,  symbol: string]",
+						"description": "Tuple upload [openTime: number, openPrice: string, highPrice: string, lowPrice: string, closePrice: string, volume: string, closeTime: number, quoteAssetVolume: string, noOfTrades: number, takerBuyAssetVolume: string, takerBuyQuoteVolume: string,  symbol: string]",
 						"content": {
 							"application/json": {
 								"schema": {}
