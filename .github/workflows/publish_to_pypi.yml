@@ -21,14 +21,14 @@ jobs:
               run: yarn filter-trade-spec
             - name: Validate & filter open-api for Rewards API 🕵️‍♂️
               run: yarn filter-rewards-spec
-            - name: Publish trade-api 🚀
+           - name: Publish trade-api 🚀
               uses: readmeio/rdme@v8
               with:
-                  rdme: openapi src/trade-api.yaml --key=rdme_xn8s9h104414055e8f8e8788dd658a1c6d85857311724c19eb37926fd3646657201898  --id=6517175f75a9ae00762b53b3 --out trade-api.yaml --title "Trade API"
+                  rdme: openapi src/trade-api.yaml --key=rdme_xn8s9h104414055e8f8e8788dd658a1c6d85857311724c19eb37926fd3646657201898 --id=6517175f75a9ae00762b53b3
             - name: Publish rewards-api 🚀
               uses: readmeio/rdme@v8
               with:
-                  rdme: openapi src/rewards-api.yaml --key=rdme_xn8s9h104414055e8f8e8788dd658a1c6d85857311724c19eb37926fd3646657201898  --id=6516c7a8ffe3cf17e8668a72 --out rewards-api.yaml --title "Rewards API"
+                  rdme: openapi src/rewards-api.yaml--key=rdme_xn8s9h104414055e8f8e8788dd658a1c6d85857311724c19eb37926fd3646657201898 --id=6516c7a8ffe3cf17e8668a72
             
             # - name: Run `openapi` command 🚀
             #   uses: readmeio/rdme@v8
