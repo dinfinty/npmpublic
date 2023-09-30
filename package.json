@@ -1,0 +1,20 @@
+{
+    "name": "dAPI",
+    "version": "2.0.0",
+    "license": "",
+    "devDependencies": {
+        "@types/node": "^16.11.7",
+        "ts-node": "^10.8.1"
+    },
+    "main": "build/index.js",
+    "scripts": {
+        "filter-trade-spec": "openapi-format src/swagger/swagger.json -o src/swagger/trade-api.yaml --yaml --filterFile trade-api-filter.yaml --rename \"Trades API\"",
+        "filter-rewards-spec": "openapi-format src/swagger/swagger.json -o src/swagger/rewards-api.yaml --yaml --filterFile rewards-api-filter.yaml --rename \"Rewards API\"",
+        "publish-spec": "yarn gen-spec && yarn filter-trade-spec && yarn filter-rewards-spec"
+       
+    },
+    "dependencies": {
+        "rdme": "^8.6.6"
+    }
+   
+}
