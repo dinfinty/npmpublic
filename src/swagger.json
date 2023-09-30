@@ -4023,7 +4023,7 @@
 						}
 					}
 				},
-				"description": "Retrieves candle stick data for a market.",
+				"description": "Retrieves uploaded success candle stick data for a market.",
 				"tags": [
 					"Public"
 				],
